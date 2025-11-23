@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get Well Soon 💛</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(#fff7f8, #ffeef3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    width: min(850px, 95%);
+    background: #ffffffcc;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(255, 100, 120, 0.15);
+  }
+
+  h1 {
+    margin: 0;
+    font-family: "Baloo 2", cursive;
+    font-size: 48px;
+    text-align: center;
+    color: #ff6b81;
+  }
+
+  p.message {
+    text-align: center;
+    color: #555;
+    margin-top: 8px;
+    margin-bottom: 30px;
+  }
+
+  .scene {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  .leg {
+    width: 180px;
+    height: 320px;
+    background: #ffe3e8;
+    border-radius: 100px;
+    position: relative;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.07);
+    animation: wiggle 2.2s ease-in-out infinite;
+  }
+
+  .leg::after {
+    content: '💫';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 32px;
+    opacity: 0;
+    animation: painBlink 1.8s infinite;
+  }
+
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  @keyframes painBlink {
+    0% { opacity: 0; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+    100% { opacity: 0; transform: scale(1); }
+  }
+
+  /* Gel tube animation */
+  .gel {
+    width: 180px;
+    height: 70px;
+    background: linear-gradient(135deg, #ff6b81, #ff9eb0);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(255, 80, 120, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Baloo 2";
+    font-size: 20px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  .droplet {
+    width: 16px;
+    height: 16px;
+    background: #ff89a1;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -6px;
+    animation: drop 1.8s infinite;
+  }
+
+  @keyframes drop {
+    0% { opacity: 0; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(12px); }
+    100% { opacity: 0; transform: translateY(24px); }
+  }
+
+  /* A cute talk bubble */
+  .bubble {
+    margin-top: 20px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 12px 20px;
+    display: inline-block;
+    font-family: "Baloo 2";
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    animation: pop 0.6s forwards;
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .center { text-align: center; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Get Well Soon 💛</h1>
+    <p class="message">Someone here is worried about you… and wants you to feel better soon! 🌼</p>
+
+    <div class="scene">
+      <div class="leg"></div>
+
+      <div class="gel">
+        Pain Relief Gel
+        <div class="droplet"></div>
+      </div>
+    </div>
+
+    <div class="center">
+      <div class="bubble">"Can you please apply the gel? It really hurts 😣💗"</div>
+    </div>
+  </div>
+</body>
+</html>
